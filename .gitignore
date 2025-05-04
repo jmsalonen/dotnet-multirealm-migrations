@@ -1,0 +1,41 @@
+# Binaries
+[Bb]in/
+[Oo]bj/
+[Bb]uild/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+**/packages/
+**/bin/
+**/obj/
+
+# Build outputs
+**/[Bb]uild/
+**/[Oo]ut/
+**/[Dd]ebug/
+**/[Rr]elease/
+
+# Visual Studio
+**/*.csproj.user
+**/*.suo
+**/*.user
+**/*.vspscc
+**/*.vssscc
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# Other
+*.log
+*.tmp
+*.bak
+*.tmp
+*.cache
+*.pid
+*.lock
+
+# OS generated files
+.DS_Store
+Thumbs.db
