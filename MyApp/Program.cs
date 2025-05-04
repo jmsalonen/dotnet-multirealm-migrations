@@ -18,6 +18,18 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+
+var realms = new[] { "realm-a", "realm-b", "realm-c" };
+
+using var scope = app.Services.CreateScope();
+var factory = scope.ServiceProvider.GetRequiredService<IRealmDbContextFactory>();
+
+foreach (var realm in realms)
+{
+    using var db = factory.CreateDbContext(realm);
+    db.Database.Migrate();
+}
+
 app.MapGet(
     "/api/{realm}/users",
     async (string realm, IRealmDbContextFactory factory) =>

@@ -22,7 +22,8 @@ public class RealmDbContextFactory : IRealmDbContextFactory
             .Options;
 
         var db = new AppDbContext(options);
-        db.Database.EnsureCreated(); // ensure DB/tables exist
+        // db.Database.EnsureCreated(); // ensure DB/tables exist
+        // db.Database.Migrate();
         return db;
     }
 }
