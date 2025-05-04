@@ -15,15 +15,14 @@ namespace MyApp.Migrations
                 table: "Users",
                 type: "TEXT",
                 nullable: false,
-                defaultValue: "");
+                defaultValue: ""
+            );
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "LastName",
-                table: "Users");
+            migrationBuilder.DropColumn(name: "LastName", table: "Users");
         }
     }
 }

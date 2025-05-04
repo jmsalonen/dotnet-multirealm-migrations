@@ -8,4 +8,4 @@ public class User
 }
 
 
-// dotnet ef migrations add InitialCreate --project MyApp.csproj
+// dotnet ef migrations add NameOfNewMigration --project MyApp.csproj

@@ -1,0 +1,6 @@
+curl -X POST \
+  http://localhost:5000/api/realm-a/users \
+  -H 'Content-Type: application/json' \
+  -d '{"name": "Pekka", "Lastname": "Mikkonen"}'
+
+curl http://localhost:5000/api/realm-a/users
